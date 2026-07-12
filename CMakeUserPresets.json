@@ -1,0 +1,43 @@
+{
+    "version": 2,
+    "configurePresets": [
+        {
+            "name": "custom",
+            "environment": {
+                "VCPKG_ROOT": "C:/Users/slava/vcpkg",
+                "VCPKG_MAX_CONCURRENCY": "8"
+            },
+            "generator": "Visual Studio 17 2022",
+            "binaryDir": "${sourceDir}/build",
+            "cacheVariables": {
+                "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+            }
+        },
+        {
+            "name": "custom-release",
+            "inherits": "custom",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+        },
+        {
+            "name": "custom-debug",
+            "inherits": "custom",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "custom-release",
+            "configurePreset": "custom-release",
+            "configuration": "Release"
+        },        
+        {
+            "name": "custom-debug",
+            "configurePreset": "custom-debug",
+            "configuration": "Debug"
+        }
+    ]
+}

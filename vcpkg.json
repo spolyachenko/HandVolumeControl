@@ -1,0 +1,6 @@
+{
+    "dependencies": [
+        {"name": "opencv", "features": ["contrib", "cuda", "cudnn"]},
+        {"name": "onnxruntime", "features": []}
+    ]
+}
