@@ -46,5 +46,5 @@ cd HandVolumeControl/build/Release
 
 ```bash
 cmake -DCMAKE_BUILD_TYPE=Release -B build -G "Visual Studio 17 2022"
-cmake --build C:/Users/slava/Desktop/study/Projects/HandVolumeControl/build --config Release --target HandVolumeControl 
+cmake --build build --config Release --target HandVolumeControl 
 ```
